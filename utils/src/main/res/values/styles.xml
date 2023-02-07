@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="w3_10sp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w3</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="w3_11sp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w3</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+    <style name="w3_12sp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w3</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="w3_14sp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w3</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="w3_16sp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w3</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="w3_18sp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w3</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+    <style name="w6_10sp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w6</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="w6_11sp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w6</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+    <style name="w6_12sp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w6</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="w6_14sp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w6</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="w6_16sp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w6</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="w6_18sp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w6</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+</resources>
