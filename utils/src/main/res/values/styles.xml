@@ -21,6 +21,10 @@
         <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w3</item>
         <item name="android:textSize">14sp</item>
     </style>
+    <style name="w3_15sp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w3</item>
+        <item name="android:textSize">15sp</item>
+    </style>
     <style name="w3_16sp">
         <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w3</item>
         <item name="android:textSize">16sp</item>
@@ -53,6 +57,10 @@
     <style name="w6_14sp">
         <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w6</item>
         <item name="android:textSize">14sp</item>
+    </style>
+    <style name="w6_15sp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w6</item>
+        <item name="android:textSize">15sp</item>
     </style>
     <style name="w6_16sp">
         <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w6</item>
