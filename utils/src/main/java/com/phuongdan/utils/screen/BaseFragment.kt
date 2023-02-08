@@ -31,7 +31,7 @@ abstract class BaseFragment<VM : ViewModel, VB : ViewBinding> : Fragment() {
         val type = (javaClass.genericSuperclass as ParameterizedType).actualTypeArguments[0]
         return type as Class<VM>
     }
-    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true);
