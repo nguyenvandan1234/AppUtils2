@@ -75,4 +75,79 @@
         <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w6</item>
         <item name="android:textSize">20sp</item>
     </style>
+
+    <style name="w3_10dp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w3</item>
+        <item name="android:textSize">10dp</item>
+    </style>
+    <style name="w3_11dp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w3</item>
+        <item name="android:textSize">11dp</item>
+    </style>
+    <style name="w3_12dp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w3</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+    <style name="w3_13dp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w3</item>
+        <item name="android:textSize">13dp</item>
+    </style>
+    <style name="w3_14dp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w3</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+    <style name="w3_15dp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w3</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+    <style name="w3_16dp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w3</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+    <style name="w3_18dp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w3</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+    <style name="w3_20dp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w3</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="w6_10dp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w6</item>
+        <item name="android:textSize">10dp</item>
+    </style>
+    <style name="w6_11dp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w6</item>
+        <item name="android:textSize">11dp</item>
+    </style>
+    <style name="w6_12dp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w6</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+    <style name="w6_13dp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w6</item>
+        <item name="android:textSize">13dp</item>
+    </style>
+    <style name="w6_14dp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w6</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+    <style name="w6_15dp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w6</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+    <style name="w6_16dp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w6</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+    <style name="w6_18dp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w6</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="w6_20dp">
+        <item name="fontFamily">@font/hiragino_kaku_gothic_pro_w6</item>
+        <item name="android:textSize">20dp</item>
+    </style>
 </resources>
