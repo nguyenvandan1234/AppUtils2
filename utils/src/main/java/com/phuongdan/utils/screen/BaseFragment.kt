@@ -1,21 +1,19 @@
 package com.danphuong.utils.screen
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.viewbinding.ViewBinding
-import java.lang.reflect.ParameterizedType
+import com.danphuong.utils.dialog.DialogUtils
 
-abstract class BaseFragment<VM : ViewModel, VB : ViewBinding> : Fragment() {
+abstract class BaseFragment<VB : ViewBinding> : Fragment() {
 
     private var _binding: VB? = null
-    lateinit var viewModel: VM
-
     val binding get() = _binding!!
+    var mLoadingDialog: AlertDialog? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -23,13 +21,7 @@ abstract class BaseFragment<VM : ViewModel, VB : ViewBinding> : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = inflateViewBinding(inflater, container)
-        viewModel = ViewModelProvider(this).get(getViewModelClass())
         return binding.root
-    }
-
-    private fun getViewModelClass(): Class<VM> {
-        val type = (javaClass.genericSuperclass as ParameterizedType).actualTypeArguments[0]
-        return type as Class<VM>
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,6 +32,23 @@ abstract class BaseFragment<VM : ViewModel, VB : ViewBinding> : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         init()
+        mLoadingDialog = activity?.let { DialogUtils.showProgressDialog(it) }
+    }
+
+    fun setLoadingDialog(alertDialog : AlertDialog) {
+        mLoadingDialog = alertDialog
+    }
+
+    fun showLoading() {
+        if (isAdded) {
+        mLoadingDialog?.show()
+        }
+    }
+
+    fun hideLoading() {
+        if (isAdded) {
+            mLoadingDialog?.hide()
+        }
     }
 
     override fun onDestroyView() {
