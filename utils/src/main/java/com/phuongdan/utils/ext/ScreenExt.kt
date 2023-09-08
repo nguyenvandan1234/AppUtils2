@@ -1,13 +1,17 @@
 package com.danphuong.utils.ext
 
+import android.app.Activity
 import android.content.Context
 import android.content.res.Resources
 import android.util.TypedValue
 import android.view.View
+import android.view.ViewGroup
 import android.view.Window
 import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.Transformation
+import android.view.inputmethod.InputMethodManager
+import android.widget.EditText
 import android.widget.LinearLayout
 import com.danphuong.utils.storge.DefaultUtilsPreference
 import kotlin.math.roundToInt
@@ -108,4 +112,32 @@ fun Context.dpToPx(dp: Int): Int {
             r.displayMetrics
         )
     )
+}
+fun View.hideKeyboard(activity: Activity?) {
+    // Set up touch listener for non-text box views to hide keyboard.
+    if (this !is EditText) {
+        this?.setOnTouchListener { v, event ->
+            hideSoftKeyboard(activity)
+            false
+        }
+    }
+
+    //If a layout container, iterate over children and seed recursion.
+    if (this is ViewGroup) {
+        for (i in 0 until this.childCount) {
+            val innerView = this.getChildAt(i)
+            innerView.hideKeyboard(activity)
+        }
+    }
+}
+
+fun hideSoftKeyboard(activity: Activity?) {
+    if (activity == null) {
+        return
+    }
+    val imm = activity.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+    val v = activity.currentFocus
+    if (imm != null && v != null) {
+        imm.hideSoftInputFromWindow(v.windowToken, 0)
+    }
 }
