@@ -21,6 +21,7 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = inflateViewBinding(inflater, container)
+        init()
         return binding.root
     }
 
@@ -31,7 +32,6 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        init()
         mLoadingDialog = activity?.let { DialogUtils.showProgressDialog(it) }
     }
 
