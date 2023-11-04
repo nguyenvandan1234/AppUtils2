@@ -35,11 +35,11 @@ abstract class BaseFragmentWithModel<VM : ViewModel, VB : ViewBinding> : Fragmen
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true);
+        init()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        init()
     }
 
     override fun onDestroyView() {
