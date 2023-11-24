@@ -19,7 +19,8 @@ abstract class BaseActivityWithModel2<VM : ViewModel, B : ViewBinding>(private v
         viewModel = ViewModelProvider(this).get(viewModelClass)
         binding = getViewBinding()
         setContentView(binding.root)
-        init()
+        initView()
+        initObserver()
         mLoadingDialog = DialogUtils.showProgressDialog(this)
     }
 
@@ -37,5 +38,5 @@ abstract class BaseActivityWithModel2<VM : ViewModel, B : ViewBinding>(private v
 
     abstract fun getViewBinding(): B
 
-    abstract fun init()
-}
+    abstract fun initView()
+    abstract fun initObserver()}

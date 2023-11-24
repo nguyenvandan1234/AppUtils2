@@ -21,13 +21,14 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = inflateViewBinding(inflater, container)
-        init()
+        initView()
         return binding.root
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true);
+        initObserver()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -61,5 +62,5 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
     }
 
     abstract fun inflateViewBinding(inflater: LayoutInflater, container: ViewGroup?): VB
-    abstract fun init()
-}
+    abstract fun initView()
+    abstract fun initObserver()}

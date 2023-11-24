@@ -14,7 +14,8 @@ abstract class BaseActivity<B : ViewBinding> : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = getViewBinding()
         setContentView(binding.root)
-        init()
+        initView()
+        initObserver()
         mLoadingDialog = DialogUtils.showProgressDialog(this)
     }
 
@@ -31,6 +32,7 @@ abstract class BaseActivity<B : ViewBinding> : AppCompatActivity() {
     }
     abstract fun getViewBinding(): B
 
-    abstract fun init()
+    abstract fun initView()
+    abstract fun initObserver()
 
 }

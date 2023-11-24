@@ -20,7 +20,8 @@ abstract class BaseActivityWithModel<VM : ViewModel, B : ViewBinding> : AppCompa
         viewModel = ViewModelProvider(this).get(getViewModelClass())
         binding = getViewBinding()
         setContentView(binding.root)
-        init()
+        initView()
+        initObserver()
         mLoadingDialog = DialogUtils.showProgressDialog(this)
     }
 
@@ -42,6 +43,7 @@ abstract class BaseActivityWithModel<VM : ViewModel, B : ViewBinding> : AppCompa
     }
     abstract fun getViewBinding(): B
 
-    abstract fun init()
+    abstract fun initView()
+    abstract fun initObserver()
 
 }

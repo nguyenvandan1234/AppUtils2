@@ -24,7 +24,7 @@ abstract class BaseFragmentWithModel<VM : ViewModel, VB : ViewBinding> : Fragmen
     ): View? {
         _binding = inflateViewBinding(inflater, container)
         viewModel = ViewModelProvider(this).get(getViewModelClass())
-        init()
+        initView()
         return binding.root
     }
 
@@ -36,6 +36,7 @@ abstract class BaseFragmentWithModel<VM : ViewModel, VB : ViewBinding> : Fragmen
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true);
+        initObserver()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -52,5 +53,5 @@ abstract class BaseFragmentWithModel<VM : ViewModel, VB : ViewBinding> : Fragmen
     }
 
     abstract fun inflateViewBinding(inflater: LayoutInflater, container: ViewGroup?): VB
-    abstract fun init()
-}
+    abstract fun initView()
+    abstract fun initObserver()}
